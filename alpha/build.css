@@ -1,6 +1,6 @@
 * {
   /*margin: 0;*/
-  padding: 0;
+  /*padding: 0;*/
   border: 0;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -462,4 +462,62 @@ a:active {text-decoration:underline;}
   margin-bottom: 0.2em;
   font-size: 21px;
   color: #5F5D5D;
+}
+
+.ingredients {
+  background-color: rgba(214, 196, 137, 0.219);
+  display:inline-block;
+  justify-content: center;
+  margin: 5rem;
+  width: 75rem;
+  font-size: 21px;
+  color: #5F5D5D;
+}
+
+.heading {
+  max-width: 20%;
+  margin-top: .3em;
+  margin-left: 1em;
+  font-size: 21px;
+  color: #5F5D5D;
+}
+
+.underline2 {
+  width: 12%;
+  margin-left: 1rem;
+  margin-right: auto;
+  margin-top: 2px;
+  margin-bottom: 20px;
+  background-color:#7E8D60;
+  height: 4px;
+}
+
+.directions {
+  display:inline-block;
+  justify-content: center;
+  margin: 5rem;
+  width: 75rem;
+  font-size: 21px;
+  color: #5F5D5D;
+}
+
+/* Create two unequal columns that floats next to each other */
+.column {
+  float: left;
+  padding: 10px;
+}
+
+.left {
+  width: 45%;
+}
+
+.right {
+  width: 55%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }

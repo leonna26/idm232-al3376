@@ -16,29 +16,12 @@
     <div class="title">      
       <h1><a href="build.html">FOOD THAT'S GOOD</a></h1>
     </div>
-    <form class="search-container">
-        <input type="text" id="search-bar" placeholder="Search">
-        <a href="#"><img class="search-icon" src="http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png"></a>
-    </form>
-    <div class="wrapper">
-        <a href="#modal-one" class="btn openbtn">Help >>
-        </a>
-        
-        <div class="modal" id="modal-one">
-          <div class="modal-content">
-            <p>Click the logo at the top to go back to the homepage. Click any recipe image to get info about that recipe. To search for a recipe, type a keyword into the search bar and click Search.</p>
-            <a href="#close" class="btn closebtn">Back</a>
-          </div>
-      
-        </div>
-        
-      </div>
 <div class="divider">
 </div>
 </header>
 <div class="feature"><img class="subtitle" src="./graphics/featuredrecipe.jpg" alt="Featured recipe">
 </div>
-<div class="subtitle">
+<!--<div class="subtitle">
     <p><strong>Meal of the Day</strong></p>
 </div>
 <div class="underline">
@@ -50,6 +33,7 @@
     </p>
 </div>
 <button class="button button1" a href="recipe.html">START COOKING</button>
+-->
 <div class="divider2">
 </div>
 <div class="filter">
@@ -70,8 +54,28 @@
             <p><strong><i>Sorry, no results found. Try another search.</i></strong></p>
     </div>
 </div>
-<div class="bottombar">
-</div>
+<div id="mySidenav" class="sidenav">
+    <a href="#modal-one" id="help">Help</a>
+    <a href="#modal-two" id="searchfield">Search</a>
+    
+  </div>
+   <div class="modal" id="modal-one">
+      <div class="modal-content">
+        <p>Click the logo at the top to go back to the homepage. Click any recipe image to get info about that recipe. To search for a recipe, type a keyword into the search bar and click Search.</p>
+        <a href="#close" class="btn closebtn">Back</a>
+      </div>
+    </div>
+    <div class="modal" id="modal-two">
+        <div class="modal-content">
+            <form class="search-container">
+                <a href="#search-bar" id="search"></a>
+                <input type="text" id="search-bar" placeholder="Search">
+              </form>
+              <a href="#" title="Close" class="modal-close">Close</a>      
+            </div>
+      </div>
+      <div class="bottombar">
+      </div>
 </body>
 </html>
 

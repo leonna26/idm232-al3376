@@ -43,7 +43,7 @@ if (!$result) {
 </div>
 </header>
 
-<div class="feature"><img class="feature" src="../images/featured.jpg" alt="Featured recipe">
+<div class="feature"><img class="feature" src="../images/featured2.jpg" alt="Featured recipe">
 </div>
 
 <div class="divider2">

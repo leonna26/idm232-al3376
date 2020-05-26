@@ -37,46 +37,23 @@ if (!$result) {
     </div>
 <header>
     <div class="title">      
-      <h1><a href="build.html">FOOD THAT'S GOOD</a></h1>
+      <h1><a href="../beta/index03_integration.php">FOOD THAT'S GOOD</a></h1>
     </div>
 <div class="divider">
 </div>
 </header>
-<!--<div id="images">
-    <img id="image1" src="./graphics/featuredrecipe.jpg" />
-    <img id="image2" src="https://i.imgur.com/qASVX.jpg" />
-    <img id="image3" src="https://i.imgur.com/fLuHO.jpg" />
-    <img id="image4" src="https://i.imgur.com/5Sd3Q.jpg" />
-  </div>
-  <div id="slider">
-    <a href="#image1">.</a>
-    <a href="#image2">.</a>
-    <a href="#image3">.</a>
-    <a href="#image4">.</a>
-  </div>-->
-<div class="feature"><img class="subtitle" src="../alpha/graphics/featuredrecipe3.jpg" alt="Featured recipe">
+
+<div class="feature"><img class="feature" src="../alpha/graphics/featuredrecipe3.jpg" alt="Featured recipe">
 </div>
-<!--<div class="subtitletext">
-    <p><strong>Meal of the Day</strong></p>
-</div>
-<div class="underline">
-</div>
-<div class="paragraph">
-    <p><i>Spanish Paella - 2hr 20min</i>
-        <br>
-            A seasonal salad of striped Chioggia beet, juicy orange, and peanuts is a fresh pairing for these zesty quesadillas. We’re seasoning the chicken filling with both jalapeño pepper and Mexican spices—balanced by a layer of melty white cheddar. Mexican crema brightened up with lime juice is perfect for dipping.
-    </p>
-</div>
-<button class="button button1" href="recipe.html">START COOKING</button>-->
 <div class="divider2">
 </div>
 <div class="filter">
   <div class="subtitle2">
-    <p><i>Explore recipes:</i></p>
+    Explore recipes:
   </div>
-<button class="fbutton button2">Pasta</button>
-<button class="fbutton button2">Lunch</button>
-<button class="fbutton button2">Dinner</button>
+<button class="fbutton button2">All Recipes</button>
+<button class="fbutton button2">Chicken</button>
+<button class="fbutton button2">Beef</button>
 <button class="fbutton button2">Vegetarian</button>
 </div>
 <div class="divider3">
@@ -93,12 +70,15 @@ if (!$result) {
         <a href="recipe.html">
               <img src="../images/<?php echo $row['main_img']; ?>" alt="Top Chef Seared Grassfed Steaks">
             </a>
-            <h2 class="name">
-            <?php echo $row['tle']; ?>
-            </h2>
+            <div class="name">
+            <h2>
+                <?php echo $row['tle']; ?>
+             </h2>
             <p class="subtitle">
             <?php echo $row['subtitle']; ?>
             </p>
+            </div>
+            
       </div>
   </div>
 <!-- Recipe End -->
@@ -119,11 +99,7 @@ if (!$result) {
 
   
 </div>
-<!-- Recipe End -->
-<!-- <div class="pageb">
-  <div class="previous">&lt;</div>
-  <div class="next">&gt;</div>
-</div> -->
+
 <div class="bottombar">
 </div>
 <div id="mySidenav" class="sidenav">

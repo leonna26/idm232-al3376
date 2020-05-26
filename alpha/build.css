@@ -129,7 +129,7 @@ input#search-bar{
     width: 92%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 45px;
+    margin-top: 20px;
     margin-bottom: 20px;
     background-color:#D6C489;
     height: 2.5px;
@@ -556,5 +556,7 @@ margin: auto;
       max-width: 500px;
   }
 }
+
+
 
 

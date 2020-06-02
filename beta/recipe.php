@@ -24,7 +24,7 @@ require '../include/db.php';
   </div>
   <header>
     <div class="title">
-      <h1><a href="index.php">FOOD THAT'S GOOD</a></h1>
+      <h1><a href="index.php">FOOD THAT'S GOOD!</a></h1>
     </div>
     <div class="divider">
     </div>

@@ -69,9 +69,8 @@ require '../include/db.php';
   </div>
   
   <div class="ingredients">
-    <br>
-    <br>
     What You'll Need for This Meal
+  </div>
     <div class="recipeingredient">
     <img src="../images/<?php echo $row['ingredients_img'];?>" class="ingredientspic">
 

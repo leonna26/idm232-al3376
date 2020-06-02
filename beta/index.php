@@ -16,20 +16,19 @@ if (!$result) {
     die ('Database query failed');
 
 }
-    
-
+  
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <title>IDM 232: Beta Build phase</title>
+  <title>Home: Food That's Good!</title>
   <meta charset="UTF-8">
   <!--META TAG VIEWPORT IMPORTANT FOR RESPONSIVENESS-->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" type="text/css" href="../alpha/normalize.css">
-  <link rel="stylesheet" href="../alpha/build.css">
+  <link rel="stylesheet" href="build.css">
 </head>
 <body>
 
@@ -37,7 +36,7 @@ if (!$result) {
     </div>
 <header>
     <div class="title">      
-      <h1><a href="../beta/index03_integration.php">FOOD THAT'S GOOD!</a></h1>
+      <h1><a href="index.php">FOOD THAT'S GOOD!</a></h1>
     </div>
 <div class="divider">
 </div>
@@ -68,7 +67,12 @@ if (!$result) {
 <!-- Recipe Start -->
 <div class="recipe"> 
       <div class="image">
-        <a href="recipe.html">
+        <!--<a href="recipe.php">-->
+        
+      <?php
+      $id = $row['id'];
+      echo "<a href=\"recipe.php?id={$id}\">";
+      ?>
               <img src="../images/<?php echo $row['main_img']; ?>" alt="Top Chef Seared Grassfed Steaks">
             </a>
             <div class="name">

@@ -72,8 +72,11 @@ require '../include/db.php';
     <br>
     <br>
     What You'll Need for This Meal
-    <div class="recipeingredient"><img class="ingredientspic" src="../images/<?php echo $row['ingredients_img']; ?>" alt="Ingredients">
+    <div class="recipeingredient">
+    <img src="../images/<?php echo $row['ingredients_img'];?>" class="ingredientspic">
+
     <ul class="list">
+
 
       <?php
         $ingredStr = $row['all_ingredients'];
@@ -90,36 +93,45 @@ require '../include/db.php';
       </div>
     </div>
 
-  
-  <div class="stepcontainer"><img class="steps" src="../images/<?php echo $row['steps_imgs']; ?>" alt="Steps">
-  <?php
-        $stepStr = $row['step_imgs'];
-      // echo $stepStr;
-      // convert string into an array 
-        $stepArray = explode("*", $stepStr);
-      // print_r($stepArray);
-        for ($lp = 0; $lp < count($stepArray); $lp++) {
-          $oneStep = $stepArray[$lp];
-          echo "<li>". $oneStep. "<li>";
-        }
-      ?>
-    <div class="stepinst">
-    <?php
-        $instStr = $row['all_steps'];
-      // echo $instStr;
-      // convert string into an array 
-        $instArray = explode("*", $instStr);
-      // print_r($instArray);
-        for ($lp = 0; $lp < count($instArray); $lp++) {
-          $oneInst = $instArray[$lp];
-          $oneStep = $stepArray[$lp];
-          echo "<li>". $oneInst . "<li>";
-        }
-      ?>
-    </div>
-  </div>
-
-
+    <div class="startcooking">
+    <br>
+    <br>
+        Let's Start Cooking: 
+      </div>
+     <?php 
+            $stepImgs = $row['step_imgs'];
+            $allSteps = $row['all_steps'];
+            $allHeaders = $row['all_steps'];
+    
+            
+            // Convert string into an array
+            // all step array has twice as much lines as all images array
+            $stepImgsArray = explode("*", $stepImgs);
+    
+            $allStepsArray = explode("*", $allSteps);
+    
+            $allHeadersArray = explode("*", $allHeaders);
+            
+            
+            for($i = 0; $i < count($stepImgsArray); $i++){
+                $oneImg = $stepImgsArray[$i];
+                $oneStep = $allStepsArray[$i*2+1];
+                $oneHeader = $allHeadersArray[$i*2];
+               // echo $oneImg . "<br>";
+                echo "<div class=\"step_parent\">";
+                echo "<img src=\"../images/" . $oneImg . "\" class=\"step_child step_img\">";
+                
+                echo "<div class=\"step_child step_childtxt\">";
+                
+                echo "<h4> $oneHeader </h4>";
+                echo "<p> $oneStep </p>";
+                
+                echo "</div>";
+                
+                echo "</div>";
+                
+    }
+    ?>
   
   <div id="mySidenav" class="sidenav">
     <a href="#modal-one" id="help">Help</a>

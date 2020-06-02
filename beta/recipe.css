@@ -1,5 +1,4 @@
 .desc {
-    display: block;
     margin: 0 15rem;
     font-size: 18px;
     font-style: italic;
@@ -9,12 +8,22 @@
 }
 
 .ingredients {
-    background-color: rgba(214, 196, 137, 0.219);
+    background-color: rgba(214, 196, 137, 0.123);
     display: block;
     justify-content: center;
     font-size: 21px;
     color: #5F5D5D;
     margin: 0 15rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+.startcooking {
+    justify-content: center;
+    font-size: 21px;
+    color: #5F5D5D;
+    margin-bottom: 2rem;
     text-align: center;
     font-weight: 600;
 }
@@ -75,6 +84,42 @@
 }
 
 .steppic {
-    max-width: 450px;
+    max-width: 400px;
+    height: 300px;
     margin: 1rem;
+}
+
+.step_parent {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    font-size: 18px;
+}
+
+.ing_img {
+    width: 350px;
+    height: 260px;
+}
+
+.step_img {
+    width: 450px;
+    height: 300px;
+}
+
+.step_childtxt {
+    margin: 0 auto;
+    align-self: flex-start;
+    max-width: 875px;
+    color: rgb(77, 74, 74);
+    font-size: 16px;
+}
+
+.ingredients {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
 }

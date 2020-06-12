@@ -8,7 +8,7 @@ require '../include/db.php';
 <html lang="en">
 
 <head>
-  <title>IDM 232: Beta Build phase</title>
+  <title>Food that's Good! Recipe page</title>
   <meta charset="UTF-8">
   <!--META TAG VIEWPORT IMPORTANT FOR RESPONSIVENESS-->
   <meta name="viewport" content="width=device-width, initial-scale=1">

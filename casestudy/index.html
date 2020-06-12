@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="casestudy.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+    <title>IDM 232: Case Study</title>
+</head>
+
+<body>
+    <div class="hero">
+        <img src="../graphics/banner-01.png" alt="Hero image" class="hero">
+    </div>
+
+    <div class="nav">
+        <p>
+            <a href="#overview">Overview | </a>
+            <a href="#context">Context and Challenges | </a>
+            <a href="#process">Process and Insights | </a>
+            <a href="#solution">The Solution | </a>
+            <a href="#results">The Results</a>
+        </p>
+    </div>
+
+    <div class="section">
+
+        <h2 id="overview"> Overview </h2>
+        <p>
+            This project entailed creating a fully functioning and fully responsive recipe website using HTML, CSS, PHP, and SQL. The website, which I have titled, "Food That's Good!" pulls data according to the information selected, including recipe images, the
+            corresponding steps, etc. There is also a help modal, and a functioning search and filter feature to retreive tailored results. This was my first experience using PHP, and although it came with a slight learning curve I am happy that this
+            has resulted in a functioning website that can populate data. Before this project, I was unaware of exactly what PHP is capable of, but I now see it as a great way to manipulate web pages based on data. This was an individual project for a
+            class, which took around ten weeks to complete. Given the state of the world we are in and the more condensed time frame, I am impressed at how quick this project took (relatively speaking) and what I was able to accomplish.
+        </p>
+
+    </div>
+
+    <div class="section">
+        <h2 id="context"> Context and Challenge </h2>
+        <p>
+            Background:
+            <br> This project was produced as an individual project for a class - specifically IDM 232; Scripting for Interactive Digital Media II. The class teaches students to build a website that houses a database, using PHP.
+            <br>
+            <br> Description:
+            <br> The project for this class was to create a responsible recipe website that displays data and information. It would also include a fully functioning search and filter feature in which data is pulled to show the correct results.
+            <br>
+            <br> Timeline:
+            <br> The timeline for the whole duration of this project was the course of ten weeks. There were various stages of the process - including an alpha, beta, and final. In the alpha stage, I developed a rough overview of how I wanted the overall
+            visual look of the site to be established, including fonts and colors. This formed the basis of my site's style guide and wireframes, which I created using Adobe XD. During this stage, I took the style guide and wireframes and built a responsive
+            static version of the website using HTML and CSS. During the Beta phase, I added .php code to pull the recipe information and images from my database to display on the home screen of my site. Along with that, I added .php to pull the correct
+            recipe, ingredients, and steps details on each recipe page. The last step of the process which brought it into the final stage, was to implement the filter and search function and .php to change the header title based on the current function.
+            These all culminated into the whole project.
+            <br>
+            <br> Purpose:
+            <br> The purpose of this project was to learn the basics of PHP and managing databases using SQL. Specifically, this project involved organizing recipes onto one website for a client using a database on SQL, then pulling the data with PHP.
+            <br>
+            <br> The Problem:
+            <br> Before this project, the client had a collection of images and corresponding .pdf files for each of his recipes. However, he wanted to be able to make it accesible to other people online and for people to interact with the site according
+            to their preferences or eating styles.
+            <br>
+            <br> Goals & Objectives:
+            <br> The goals of this project were to create a fully functioning responsive recipe website, where information and data can be pulled from a database so that the information and details can be displayed according to whichever recipe is selected.
+            Additionally, when a user inputs text into the search field or selects a filter criteria, the page will change depending on the search or filter selected.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2 id="process"> Process and Insights </h2>
+
+        <p>
+            Design and Wireframes:
+            <br> For the design process, I drew inspiration from a various different recipe websites and food blogs.
+            <br> I settled on this set of fonts and colors to make up my style tile. I thought this set of colors looked organic, hearty, and homey, which went along with the "homecooking" kind of feel that the recipes had.
+            <img src="../graphics/styletile.png" alt="Style tile" class="center">
+            <br>
+            <br> Once I established the color scheme and fonts I wanted for my site, I created wireframes using Adobe XD. Here is an example of the wireframes for the desktop version's home page and recipe page.
+            <br>
+            <br>
+            <img src="../graphics/desktop/desktop_home.png" alt="Desktop Home" class="center">
+            <br>
+            <br>
+            <img src="../graphics/desktop/desktop_recipe.png" alt="Desktop Recipe" class="center">
+            <br>
+            <br> The wireframes were a good basis of inspiration, but as I was building my site I noticed I started veering off. One of the changes that I implemented that does not exist in the wireframes is a microinteraction with modals for the search
+            and help functions. I added two tabs that were fixed to the side of the page. Users could click on one of the tabs and open a modal for "help" or "search" accordingly. I also decided to change the hero image at the top of the home page to
+            include a collage image of many different meals to look more inviting.
+            <br>
+            <br> Fonts:
+            <br> One issue I had throughout the project was getting my files to show properly on another computer. They would show consistently fine on my end, but every time I looked it up on another device they would default to a more standard font.
+            I did not totally figure out the issue, but I believe it was probably linking my local file correctly. I finally decided to switch the fonts altogether, since the ones I had previously were not Google Fonts and could not easily be imported
+            into the HTMl or CSS. Once I chose new fonts, they started displaying.
+            <br>
+            <br> Optimizing Images:
+            <br> Another insight I had during the process of this project was to utilize online image optimizer tools to reduce the size of the images. Image optimization is important in order for images to load quickly once you load a webpage. If not,
+            the images take awhile to load, which can sometimes affect how the layout of the whole page is displayed. I used to use Photoshop to optimize images, but it took a long time and was pretty tedious. With the help of online optimizer tools,
+            I was able to optimize a whole bulk of images at one time.
+            <br>
+            <br> Organizing the Data:
+            <br> This step of the process was done with my fellow classmates. We took the 30+ data of recipe .pdf files and inputted the information into a Google Spreadsheet, where we divided the information into rows and columns according to title,
+            subtitle, images, etc. We established the names and matched the file names so that there would not be any discrepancies when the data had to be pulled.
+            <br>
+            <br> PHP Code:
+            <br> Learning how to navigate PHP was an interesting experience with a slight learning curve. I had to remember to really pay attention to the names of my elements to make sure they matched with my database. Making seemingly little mistakes
+            like typing "title" instead of "tle" really throws the code off and prevents the data from being displayed. There were also typos in the image file names in the database, so those had to be corrected in order to show up. Another problem I
+            encountered as a looping issue when trying to put together my recipe page and display the steps. The step title and the step details were supposed to alternate or stagger amongst each other, but the way we had set up our spreadsheet did not
+            allow for this to happen and the way our professor taught in class was not how our database was structured. With the help and guidance of classmates who were in the same boat, we figured out how to troubleshoot this issue by restructuring
+            our loop.
+            <br>
+            <br> mySQL:
+            <br> I encountered a few frustrations when setting up my database in mySQL. I was able to establish my database in the myPHPadmin side and export the .sql file, but when I tried to import it into the BlueHost server database, I got an error
+            several times. I did some online troubleshooting and restarted the export/import process a couple times and it somehow managed to work.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2 id="solution"> The Solution </h2>
+        <p>
+            <iframe src="https://player.vimeo.com/video/428378184" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+            <p><a href="https://vimeo.com/428378184">Food that&#039;s Good! Recipe Website Walkthrough</a>.</p>
+            <br> Link to my final build of the project: <a href="../beta/index.php" target="_blank">Final Build</a>
+        </p>
+    </div>
+
+    <div class="section">
+        <h2 id="results"> The Results </h2>
+        <p>
+            Overall, this project came out to be a success. I learned a lot about PHP and SQL. If I were to change anything of the process, I would stretch myself more and try to improve the HTML/CSS part of it. I could have stuck with the layout of my wireframes,
+            but I ended up changing it. Another thing I would try to implement if I had more time, is adding an "active" feature where the active filter button has a different color than the other filter options. This would help users know that they have
+            clicked that button. In conclusion, even though this course was done in a shortened time frame as a normal school term would have been, and given all the things going on, I am pleased with how it turned out.
+        </p>
+    </div>
+
+    <div class="footer">
+        <br>
+        <a href="#top">Back to Top | </a> Leonna Designs, 2020
+    </div>
+</body>
+
+</html>

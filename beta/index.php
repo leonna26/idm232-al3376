@@ -4,9 +4,33 @@
 
 require '../include/db.php';
 
-// Step 2: Perform a DB table query
+// Get filter info if passed in URL
+$filter = $_GET['filter'];
 
 $table = 'recipes'; 
+
+if (isset($_POST['submit'])) {
+// echo "User clicked on submit button";
+$search = $_POST['search'];
+$search = htmlspecialchars($_POST['search']);
+
+
+$query = "SELECT * FROM {$table} WHERE tle LIKE '%{$search}%' OR subtitle LIKE '%{$search}%' OR description LIKE '%{$search}%' OR all_ingredients LIKE '%{$search}%'";
+$result = mysqli_query($connection, $query);
+
+if (!$result) {
+  die ('Search query failed');
+  } 
+} else if (isset($filter)) {
+  $query = "SELECT * FROM {$table} WHERE proteine LIKE '%{$filter}%'";
+  $result = mysqli_query($connection, $query);
+
+if (!$result) {
+  die ('Filter query failed');
+    } 
+
+} else {
+// Step 2: Perform a DB table query
 $query = "SELECT * FROM {$table} ";
 $result = mysqli_query($connection, $query);
 
@@ -16,8 +40,10 @@ if (!$result) {
     die ('Database query failed');
 
 }
-  
+}
 ?>
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -29,6 +55,8 @@ if (!$result) {
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" type="text/css" href="../alpha/normalize.css">
   <link rel="stylesheet" href="build.css">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Satisfy&display=swap" rel="stylesheet">
+
 </head>
 <body>
 
@@ -49,15 +77,30 @@ if (!$result) {
 </div>
 <div class="filter">
   <div class="subtitle2">
-    Explore recipes:
+    <?php
+    if (isset($_POST['submit'])){
+      if ($result->num_rows== 0){
+        echo "Sorry, no recipes found:";
+
+      } else {
+        echo "Here are your recipe results:";
+      }
+
+    } else if (isset($filter)) {
+      echo "Here are your recipe results:";
+      } else {
+      echo "Explore recipes:";
+    }
+  
+    ?>
   </div>
-<button class="fbutton button2">All Recipes</button>
-<button class="fbutton button2">Chicken</button>
-<button class="fbutton button2">Beef</button>
-<button class="fbutton button2">Vegetarian</button>
-</div>
-<div class="divider3">
-</div>
+
+  <form class="filter-container">
+        <a href="index.php" class="filter"><button type="button" class="fbutton button2">All Recipes</button></a>
+        <a href="index.php?filter=Chicken" class="filter"><button type="button" class="fbutton button2">Chicken</button></a><a href="index.php?filter=Beef" class="filter"><button type="button" class="fbutton button2">Beef</button></a>
+        <a href="index.php?filter=Vegetarian" class="filter"><button type="button" class="fbutton button2">Vegetarian</button></a>
+    </form>
+
 <!--RECIPE CARDS-->
 <div id="content">
 
@@ -66,15 +109,16 @@ if (!$result) {
     ?>
 <!-- Recipe Start -->
 <div class="recipe"> 
-      <div class="image">
-        <!--<a href="recipe.php">-->
-        
       <?php
       $id = $row['id'];
       echo "<a href=\"recipe.php?id={$id}\">";
       ?>
+      <div class="image">
+        <!--<a href="recipe.php">-->
+        
+      
               <img src="../images/<?php echo $row['main_img']; ?>" alt="Top Chef Seared Grassfed Steaks">
-            </a>
+            
             <div class="name">
             <h2>
                 <?php echo $row['tle']; ?>
@@ -83,7 +127,7 @@ if (!$result) {
             <?php echo $row['subtitle']; ?>
             </p>
             </div>
-            
+            </a>
       </div>
   </div>
 <!-- Recipe End -->
@@ -120,11 +164,12 @@ if (!$result) {
   </div>
   <div class="modal" id="modal-two">
       <div class="modal-content">
-          <form class="search-container">
+          <form class="search-container" action="index.php" method="POST">
               <a href="#search-bar" id="search"></a>
-              <input type="text" id="search-bar" placeholder="Search">
-            </form>
-            <a href="#" title="Close" class="modal-close">Close</a>      
+              <input type="text" id="search-bar" name= "search" placeholder="Search">
+              <input type="submit" name="submit" value="Submit" class="searchsubmit">
+          </form>
+            <a href="index.php" title="Close" class="modal-close">Close</a>      
           </div>
     </div>
 

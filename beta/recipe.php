@@ -90,12 +90,11 @@ require '../include/db.php';
       ?>
       </ul>
       </div>
-    </div>
 
     <div class="startcooking">
     <br>
     <br>
-        Let's Start Cooking: 
+        Let's Start Cooking! 
       </div>
      <?php 
             $stepImgs = $row['step_imgs'];
@@ -131,27 +130,6 @@ require '../include/db.php';
                 
     }
     ?>
-  
-  <div id="mySidenav" class="sidenav">
-    <a href="#modal-one" id="help">Help</a>
-    <a href="#modal-two" id="searchfield">Search</a>
-
-  </div>
-  <div class="modal" id="modal-one">
-    <div class="modal-content">
-      <p>Click the logo at the top to go back to the homepage. Click any recipe image to get info about that recipe. To search for a recipe, type a keyword into the search bar and click Search.</p>
-      <a href="#close" class="btn closebtn">Back</a>
-    </div>
-  </div>
-  <div class="modal" id="modal-two">
-    <div class="modal-content">
-      <form class="search-container">
-        <a href="#search-bar" id="search"></a>
-        <input type="text" id="search-bar" placeholder="Search">
-      </form>
-      <a href="#" title="Close" class="modal-close">Close</a>
-    </div>
-  </div>
 
 
   <div class="bottombar">

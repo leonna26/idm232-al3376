@@ -8,10 +8,9 @@
 }
 
 .ingredients {
-    background-color: rgba(214, 196, 137, 0.123);
     display: block;
     justify-content: center;
-    font-size: 21px;
+    font-size: 24px;
     color: #5F5D5D;
     margin: 0 15rem;
     margin-bottom: 2rem;
@@ -21,7 +20,7 @@
 
 .startcooking {
     justify-content: center;
-    font-size: 21px;
+    font-size: 24px;
     color: #5F5D5D;
     margin-bottom: 2rem;
     text-align: center;
@@ -44,8 +43,8 @@
     font-size: 28px;
     margin-top: 2rem;
     margin-bottom: 0.2rem;
-    font-weight: 525;
-    text-transform: uppercase;
+    font-weight: 600;
+    color: rgb(66, 65, 65);
 }
 
 .recsubtitle {
@@ -75,6 +74,11 @@
     width: 75%;
     height: 75%;
     margin: 0 15rem;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
 }
 
 .list {
@@ -84,12 +88,11 @@
     margin-bottom: 2rem;
     font-size: 18px;
     text-align: left;
-    background-color: rgba(214, 196, 137, 0.123);
 }
 
 .steppic {
     max-width: 400px;
-    height: 300px;
+    width: 100%;
     margin: 1rem;
 }
 
@@ -120,14 +123,6 @@
     font-size: 16px;
 }
 
-.ingredients {
-    display: flex;
-    flex-flow: column;
-    justify-content: space-around;
-    align-items: center;
-    padding: 1rem;
-}
-
 @media screen and (min-width: 320px) {
     .ingredientspic {
         display: block;
@@ -146,10 +141,8 @@
         line-height: 1.4;
     }
     .ingredients {
-        background-color: rgba(214, 196, 137, 0.123);
         display: block;
         justify-content: center;
-        font-size: 21px;
         color: #5F5D5D;
         margin: 0 6rem;
         margin-bottom: 2rem;
@@ -163,7 +156,6 @@
         margin-bottom: 2rem;
         font-size: 14px;
         text-align: left;
-        background-color: rgba(214, 196, 137, 0.123);
     }
     .step_childtxt {
         margin: 0 6rem;
@@ -192,10 +184,8 @@
         line-height: 1.4;
     }
     .ingredients {
-        background-color: rgba(214, 196, 137, 0.123);
         display: block;
         justify-content: center;
-        font-size: 18px;
         color: #5F5D5D;
         margin: 0 15rem;
         margin-bottom: 2rem;
@@ -209,7 +199,7 @@
         margin-bottom: 2rem;
         font-size: 18px;
         text-align: left;
-        background-color: rgba(214, 196, 137, 0.123);
+        text-align: center;
     }
     .step_childtxt {
         margin: 0 15rem;
